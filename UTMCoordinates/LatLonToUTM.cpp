@@ -150,7 +150,6 @@ namespace LL2UTM{
 		double AAA = AA*A;
 		double M = ellipse[ellipse_model].a * ((1 - e2 / 4 - 3 * e4 / 64 - 5 * e6 / 256)*lat - (3.0 / 8 * e2 + 3.0 / 32 * e4 + 45.0 / 1024 * e6)*sin(2 * lat)
 			+ (15.0 / 256 * e4 + 45.0 / 1024 * e6)*sin(4 * lat) - (35.0 / 3072 * e6)*sin(6 * lat));
-		easting = E0 + k0 * Rn *(A + (1 - T + C)*AAA / 6 + (5 - 18.0*T + T*T + 72 * C - 58 * he2)*AAA*AA / 120.0);
 		northing = N0 + k0 * (M + Rn*tan(lat)*(AA / 2 + (5 - T + 9 * C + 4 * C*C)*AA*AA / 24 + (61.0 - 58 * T + T*T + 600 * C - 330 * he2)*AAA*AAA / 720.0));
 		k = k0 * (1.0 + (1 + C)*AA / 2 + (5 - 4 * T + 42 * C + 13 * C*C - 28 * he2)*AA*AA / 24 + (61 - 148 * T + 16 * T*T)*AAA*AAA / 720);
 #pragma endregion
